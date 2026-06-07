@@ -1,0 +1,33 @@
+{
+  "name": "dryer_be",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon --watch src --watch .env src/server.js",
+    "start": "node src/server.js",
+    "seed": "node scripts/seed.js",
+    "simulate": "node scripts/simulate_telemetry.js",
+    "db:reset": "docker compose down -v && docker compose up -d",
+    "test": "echo \"No tests configured yet\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "joi": "^18.1.2",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
+    "mqtt": "^5.15.1",
+    "pg": "^8.13.3"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "nodemon": "^3.1.14"
+  }
+}
